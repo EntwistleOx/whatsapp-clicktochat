@@ -298,15 +298,12 @@
             <span class="received">Hola como te puedo ayudar?</span>
           </div>
           <div class="body-send">
-            <textarea name="msg" rows="1" class="sent-msg"></textarea>
-            <div class="circle">
-              <img
-                src="img/send-light.svg"
-                onclick="sendWhatsapp()"
-                alt="send"
-                class="send"
-              />
-            </div>
+            <form id="sendWhatsapp">
+              <textarea rows="1" id="sent-msg" class="sent-msg"></textarea>
+              <button id="btn-send" class="btn-send" value="">
+                <img src="img/send-light.svg" alt="send" class="send" />
+              </button>
+            </form>
           </div>
         </div>
       </div>

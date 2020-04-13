@@ -22,27 +22,21 @@ function isMobile() {
   }
 }
 
-function sendWhatsapp() {
+document.getElementById('sendWhatsapp').onsubmit = function () {
+  const msg = document.getElementById('sent-msg').value;
   if (isMobile()) {
     window.open(
-      'whatsapp://send/?phone=56963472861&text=Hola!%20me%20ayudan?&source&data'
+      'whatsapp://send/?phone=56963472861&text=' +
+        encodeURI(msg) +
+        '&source&data'
     );
   } else {
     window.open(
-      'https://web.whatsapp.com/send?phone=56963472861&text=Hola!%20me%20ayudan?',
+      'https://web.whatsapp.com/send?phone=56963472861&text=' +
+        encodeURI(msg) +
+        '',
       '_blank'
     );
   }
-}
-
-// $('#myDiv').floatingWhatsApp({
-//   phone: '5491133359850',
-//   popupMessage: 'Hello, how can we help you?',
-//   message: "I'd like to order a pizza",
-//   showPopup: true,
-//   showOnIE: false,
-//   headerTitle: 'Welcome!',
-//   headerColor: 'crimson',
-//   backgroundColor: 'crimson',
-//   buttonImage: '<img src="burger.svg" />'
-// });
+  return false;
+};
