@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>WhatsApp Test</title>
+    <title>Click to Chat 👽</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -275,37 +275,43 @@
       <div class="whatsapp-popup" id="whatsapp-popup">
         <div class="whatsapp-popup-header">
           <div>
-            <div class="whatsapp-popup-header-avatar">
+            <div class="header-avatar">
               <img src="img/avatar.svg" alt="avatar" class="avatar" />
             </div>
-            <div class="whatsapp-popup-header-title">
-              <span>
+            <div class="header-title">
+              <span class="title">
                 Escribenos por Whatsapp!
               </span>
             </div>
           </div>
-          <div class="whatsapp-popup-header-close">
+          <div class="header-close">
             <img
               src="img/close-light.svg"
               alt="close"
               onclick="closeWhatsapp()"
+              class="close"
             />
           </div>
         </div>
         <div class="whatsapp-popup-body">
-          <span>Hola como te puedo ayudar?</span>
-        </div>
-        <div class="whatsapp-pop-footer">
-          <div class="msg">
-            <textarea name="msg" rows="1"></textarea>
+          <div class="body-received">
+            <span class="received">Hola como te puedo ayudar?</span>
           </div>
-          <div class="circle">
-            <img src="img/send-light.svg" onclick="sendWhatsapp()" alt="send" />
+          <div class="body-send">
+            <textarea name="msg" rows="1" class="sent-msg"></textarea>
+            <div class="circle">
+              <img
+                src="img/send-light.svg"
+                onclick="sendWhatsapp()"
+                alt="send"
+                class="send"
+              />
+            </div>
           </div>
         </div>
       </div>
       <a class="whatsapp-btn-open" onclick="openWhatsapp()">
-        <img src="img/whatsapp.svg" />
+        <img src="img/whatsapp.svg" class="btn-open" />
       </a>
     </div>
     <!-- FIN WHATSAPP WIDGET -->

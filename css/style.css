@@ -1,25 +1,27 @@
 /* Whatsapp open button */
 .whatsapp-btn-open {
   position: fixed;
-  right: 10px;
+  right: 15px;
   bottom: 70px;
-  width: 60px;
+  width: 52px;
   z-index: 1000;
   cursor: pointer;
 }
 
-.whatsapp-btn-open img {
+.whatsapp-btn-open .btn-open {
   width: 100%;
   height: auto;
   border-radius: 50%;
   box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.25);
 }
 
+.btn-open:hover {
+  box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.6);
+}
+
 /* Whatsapp popup - hidden by default */
 .whatsapp-popup {
-  border-radius: 5px;
   display: none;
-  box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.25);
   position: fixed;
   bottom: 140px;
   right: 15px;
@@ -32,8 +34,7 @@
   border-radius: 5px 5px 0 0;
   background: #128c7e;
   color: #fff;
-  height: 55px;
-  padding: 0 8px;
+  padding: 8px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -48,87 +49,74 @@
   align-content: center;
 }
 
-.whatsapp-popup .whatsapp-popup-header .whatsapp-popup-header-avatar {
+.whatsapp-popup .whatsapp-popup-header .header-avatar {
   width: 36px;
   height: 36px;
 }
 
-.whatsapp-popup .whatsapp-popup-header .whatsapp-popup-header-avatar .avatar {
+.whatsapp-popup .whatsapp-popup-header .header-avatar .avatar {
   width: 100%;
   border-radius: 50%;
   background: #fff;
 }
 
-.whatsapp-popup .whatsapp-popup-header .whatsapp-popup-header-title {
+.whatsapp-popup .whatsapp-popup-header .header-title {
   font-size: 14px;
-  padding: 8px;
+  padding: 0 8px;
 }
 
-.whatsapp-popup .whatsapp-popup-header .whatsapp-popup-header-close {
-  width: 9px;
+.whatsapp-popup .whatsapp-popup-header .header-close {
+  width: 8px;
 }
 
-.whatsapp-popup .whatsapp-popup-header .whatsapp-popup-header-close:hover {
-  opacity: 0.7;
-}
-
-.whatsapp-popup .whatsapp-popup-header .whatsapp-popup-header-close img {
+.whatsapp-popup .whatsapp-popup-header .header-close .close {
   width: 100%;
+  margin-top: 2px;
 }
 
 /* Whatsapp popup - body */
 .whatsapp-popup .whatsapp-popup-body {
   cursor: pointer;
   background: #ece5dd;
-  height: 60px;
-  display: flex;
-  justify-content: flex-start;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.25);
 }
 
-.whatsapp-popup .whatsapp-popup-body span {
-  align-self: center;
+.whatsapp-popup .whatsapp-popup-body .received {
   background: #fff;
-  padding: 6px;
-  margin-left: 15px;
-  font-size: 13px;
+  display: inline-block;
+  padding: 8px;
+  margin: 16px 0 16px 16px;
+  font-size: 12px;
   border-radius: 0px 5px 5px 5px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-.whatsapp-popup .whatsapp-popup-body span:before {
+.whatsapp-popup .whatsapp-popup-body .received:before {
   position: absolute;
   content: '';
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0px 10px 10px 0;
+  border-width: 0px 8px 8px 0;
   border-color: transparent #fff transparent transparent;
-  top: 4.33rem;
-  left: 0.5rem;
+  top: 68px;
+  left: 8px;
 }
 
-/* Whatsapp popup - footer msg */
-.whatsapp-pop-footer {
-  cursor: pointer;
-  background: #ece5dd;
-  border-radius: 0 0 5px 5px;
+.whatsapp-popup .whatsapp-popup-body .body-send {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   align-content: center;
-  padding: 0 8px;
+  padding: 0 8px 8px 8px;
 }
 
-.whatsapp-pop-footer .msg {
-  flex: 4;
-  margin-right: 10px;
-}
-
-.whatsapp-pop-footer .msg textarea {
-  border-radius: 5px;
-  padding: 15px;
-  width: 100%;
-  font-size: 13px;
+.whatsapp-popup .whatsapp-popup-body .body-send .sent-msg {
+  border-radius: 15px;
+  padding: 9px;
+  width: 80%;
+  font-size: 12px;
   resize: none;
   border: none;
   overflow: auto;
@@ -136,29 +124,16 @@
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-.whatsapp-pop-footer textarea:before {
-  position: absolute;
-  content: '';
-  width: 50px;
-  height: 50px;
-  border-style: solid;
-  border-width: 10px 10 10px 10px;
-  border-color: transparent #000 transparent transparent;
-  top: 4.65rem;
-  left: 0.5rem;
-}
-
-.whatsapp-pop-footer .circle {
-  flex: 1.1;
+.whatsapp-popup .whatsapp-popup-body .body-send .circle {
   background: #128c7e;
   border-radius: 50%;
-  /* width: 45px; */
-  height: 45px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.whatsapp-pop-footer .circle img {
-  width: 20px;
+.whatsapp-popup .whatsapp-popup-body .body-send .circle .send {
+  width: 18px;
 }
