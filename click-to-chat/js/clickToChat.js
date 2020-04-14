@@ -175,7 +175,7 @@ template.innerHTML = `
       </div>
       <div class="header-close">
         <img
-          src="../src/img/close-light.svg"
+          src=""
           alt="close"
           class="close"
           id="close-popup"
@@ -190,14 +190,14 @@ template.innerHTML = `
         <form id="send-whatsapp">
           <textarea rows="1" id="sent-msg" class="sent-msg"></textarea>
           <button id="btn-send" class="btn-send" value="">
-            <img src="../src/img/send-light.svg" alt="send" class="send" />
+            <img src="" alt="send" class="send" />
           </button>
         </form>
       </div>
     </div>
   </div>
   <a class="whatsapp-btn-open" id="toggle-popup">
-    <img src="../src/img/whatsapp.svg" class="btn-open" />
+    <img src="" class="btn-open" />
   </a>
 </div>
 `;
@@ -207,6 +207,7 @@ class ClickToChat extends HTMLElement {
     super();
     this.showPopup = false;
     this.attachShadow({ mode: 'open' });
+
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.phone = this.getAttribute('phone');
     this.shadowRoot.querySelector('.title').innerHTML = this.getAttribute(
@@ -216,6 +217,20 @@ class ClickToChat extends HTMLElement {
       'message'
     );
     this.shadowRoot.querySelector('.avatar').src = this.getAttribute('avatar');
+
+    this.shadowRoot.querySelector(
+      '.close'
+    ).src = `${window.location.href}/click-to-chat/img/close-light.svg`;
+
+    this.shadowRoot.querySelector(
+      '.send'
+    ).src = `${window.location.href}/click-to-chat/img/send-light.svg`;
+
+    this.shadowRoot.querySelector(
+      '.btn-open'
+    ).src = `${window.location.href}/click-to-chat/img/whatsapp.svg`;
+
+    console.log(window.location.href);
   }
 
   togglePopup() {
@@ -244,9 +259,8 @@ class ClickToChat extends HTMLElement {
     }
   }
 
-  sendWhatsapp() {
+  sendWhatsapp(e) {
     const msg = this.shadowRoot.getElementById('sent-msg').value;
-    alert(this.isMobile());
     if (this.isMobile()) {
       window.open(
         `whatsapp://send/?phone=${this.phone}&text=${encodeURI(
@@ -261,7 +275,8 @@ class ClickToChat extends HTMLElement {
         '_blank'
       );
     }
-    return false;
+    // return false;
+    e.preventDefault();
   }
 
   connectedCallback() {
@@ -273,7 +288,7 @@ class ClickToChat extends HTMLElement {
       .addEventListener('click', () => this.togglePopup());
     this.shadowRoot
       .querySelector('#send-whatsapp')
-      .addEventListener('submit', () => this.sendWhatsapp());
+      .addEventListener('submit', (e) => this.sendWhatsapp(e));
   }
 
   disconnectedCallback() {
