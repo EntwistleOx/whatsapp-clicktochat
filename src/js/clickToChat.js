@@ -31,7 +31,7 @@ template.innerHTML = `
 
 /* Whatsapp popup - hidden by default */
 .whatsapp-popup {
-  /*display: none;*/
+  display: none;
   max-width: 250px;
   position: fixed;
   bottom: 118px;
@@ -163,43 +163,43 @@ template.innerHTML = `
 }
 </style>
 <div id="whatsapp-clicktochat">
-      <div class="whatsapp-popup" id="whatsapp-popup">
-        <div class="whatsapp-popup-header">
-          <div>
-            <div class="header-avatar">
-              <img src="" alt="avatar" class="avatar" />
-            </div>
-            <div class="header-title">
-              <span class="title"></span>
-            </div>
-          </div>
-          <div class="header-close">
-            <img
-              src="img/close-light.svg"
-              alt="close"
-              class="close"
-              id="close-popup"
-            />
-          </div>
+  <div class="whatsapp-popup" id="whatsapp-popup">
+    <div class="whatsapp-popup-header">
+      <div>
+        <div class="header-avatar">
+          <img src="" alt="avatar" class="avatar" />
         </div>
-        <div class="whatsapp-popup-body">
-          <div class="body-received">
-            <span class="received"></span>
-          </div>
-          <div class="body-send">
-            <form id="send-whatsapp">
-              <textarea rows="1" id="sent-msg" class="sent-msg"></textarea>
-              <button id="btn-send" class="btn-send" value="">
-                <img src="img/send-light.svg" alt="send" class="send" />
-              </button>
-            </form>
-          </div>
+        <div class="header-title">
+          <span class="title"></span>
         </div>
       </div>
-      <a class="whatsapp-btn-open" id="toggle-popup">
-        <img src="img/whatsapp.svg" class="btn-open" />
-      </a>
+      <div class="header-close">
+        <img
+          src="../src/img/close-light.svg"
+          alt="close"
+          class="close"
+          id="close-popup"
+        />
+      </div>
     </div>
+    <div class="whatsapp-popup-body">
+      <div class="body-received">
+        <span class="received"></span>
+      </div>
+      <div class="body-send">
+        <form id="send-whatsapp">
+          <textarea rows="1" id="sent-msg" class="sent-msg"></textarea>
+          <button id="btn-send" class="btn-send" value="">
+            <img src="../src/img/send-light.svg" alt="send" class="send" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <a class="whatsapp-btn-open" id="toggle-popup">
+    <img src="../src/img/whatsapp.svg" class="btn-open" />
+  </a>
+</div>
 `;
 
 class ClickToChat extends HTMLElement {
