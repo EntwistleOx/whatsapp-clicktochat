@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+#whatsapp-clicktochat {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Whatsapp open button */
 .whatsapp-btn-open {
   position: fixed;
@@ -113,9 +119,9 @@
 }
 
 .whatsapp-popup .whatsapp-popup-body .body-send .sent-msg {
+  width: 70%;
   border-radius: 15px;
   padding: 9px;
-  width: 80%;
   font-size: 12px;
   resize: none;
   border: none;

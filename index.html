@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+    /> -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
 
     <title>Click to Chat 👽</title>
   </head>
@@ -60,6 +60,13 @@
         </form>
       </div>
     </nav>
+
+    <click-to-chat
+      phone="56963472861"
+      avatar="img/avatar.svg"
+      title="Hablemos por WhatsApp"
+      message="Hola! como te puedo ayudar?"
+    ></click-to-chat>
 
     <!-- CONTENT -->
     <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -271,46 +278,49 @@
     </div>
 
     <!-- WHATSAPP WIDGET -->
-    <div id="whatsapp-clicktochat">
-      <div class="whatsapp-popup" id="whatsapp-popup">
-        <div class="whatsapp-popup-header">
-          <div>
-            <div class="header-avatar">
-              <img src="img/avatar.svg" alt="avatar" class="avatar" />
-            </div>
-            <div class="header-title">
-              <span class="title">
-                Escribenos por Whatsapp!
-              </span>
-            </div>
+    <!-- 
+  <div id="whatsapp-clicktochat">
+    <div class="whatsapp-popup" id="whatsapp-popup">
+      <div class="whatsapp-popup-header">
+        <div>
+          <div class="header-avatar">
+            <img src="img/avatar.svg" alt="avatar" class="avatar" />
           </div>
-          <div class="header-close">
-            <img
-              src="img/close-light.svg"
-              alt="close"
-              onclick="closeWhatsapp()"
-              class="close"
-            />
+          <div class="header-title">
+            <span class="title">
+              Hablemos por Whatsapp
+            </span>
           </div>
         </div>
-        <div class="whatsapp-popup-body">
-          <div class="body-received">
-            <span class="received">Hola como te puedo ayudar?</span>
-          </div>
-          <div class="body-send">
-            <form id="sendWhatsapp">
-              <textarea rows="1" id="sent-msg" class="sent-msg"></textarea>
-              <button id="btn-send" class="btn-send" value="">
-                <img src="img/send-light.svg" alt="send" class="send" />
-              </button>
-            </form>
-          </div>
+        <div class="header-close">
+          <img
+            src="img/close-light.svg"
+            alt="close"
+            onclick="closeWhatsapp()"
+            class="close"
+          />
         </div>
       </div>
-      <a class="whatsapp-btn-open" onclick="openWhatsapp()">
-        <img src="img/whatsapp.svg" class="btn-open" />
-      </a>
+      <div class="whatsapp-popup-body">
+        <div class="body-received">
+          <span class="received">Hola como te puedo ayudar?</span>
+        </div>
+        <div class="body-send">
+          <form id="sendWhatsapp">
+            <textarea rows="1" id="sent-msg" class="sent-msg"></textarea>
+            <button id="btn-send" class="btn-send" value="">
+              <img src="img/send-light.svg" alt="send" class="send" />
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
+    <a class="whatsapp-btn-open" onclick="openWhatsapp()">
+      <img src="img/whatsapp.svg" class="btn-open" />
+    </a>
+  </div>
+ -->
+
     <!-- FIN WHATSAPP WIDGET -->
 
     <!-- FOOTER -->
@@ -333,6 +343,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/clickToChat.js"></script>
   </body>
 </html>
