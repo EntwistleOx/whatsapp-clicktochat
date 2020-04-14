@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Click to chat whatsapp widget",
   "scripts": {
-    "start": "serve /example"
+    "start": "serve"
   },
   "repository": {
     "type": "git",
