@@ -220,17 +220,21 @@ class ClickToChat extends HTMLElement {
 
     this.shadowRoot.querySelector(
       '.close'
-    ).src = `${window.location.href}/click-to-chat/img/close-light.svg`;
+    ).src = `${window.location.pathname
+      .split('/')
+      .pop()}/click-to-chat/img/close-light.svg`;
 
     this.shadowRoot.querySelector(
       '.send'
-    ).src = `${window.location.href}/click-to-chat/img/send-light.svg`;
+    ).src = `${window.location.pathname
+      .split('/')
+      .pop()}/click-to-chat/img/send-light.svg`;
 
     this.shadowRoot.querySelector(
       '.btn-open'
-    ).src = `${window.location.href}/click-to-chat/img/whatsapp.svg`;
-
-    console.log(window.location.href);
+    ).src = `${window.location.pathname
+      .split('/')
+      .pop()}/click-to-chat/img/whatsapp.svg`;
   }
 
   togglePopup() {
@@ -280,6 +284,7 @@ class ClickToChat extends HTMLElement {
   }
 
   connectedCallback() {
+    console.log(window.location.pathname.split('/').pop());
     this.shadowRoot
       .querySelector('#toggle-popup')
       .addEventListener('click', () => this.togglePopup());
